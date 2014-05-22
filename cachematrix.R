@@ -13,7 +13,7 @@ makeCacheMatrix <- function(matrx = matrix()) {
     matrxInv <<- NULL                      #set the cached value of the matrix inverse to NULL
   }
   get <- function() matrx                  #get the cached value of the original matrix
-  setInv <- function(Inv) matrxInv <<- Inv #if the inverse value is NOT cached, calculate it and cache it.
+  setInv <- function(Inv) matrxInv <<- Inv #cache the inverse
   getInv <- function() matrxInv            #get the cached value of the matrix inverse
   list(set = set, get = get,               #return a list object with the various set and get values
        setInv = setInv,
